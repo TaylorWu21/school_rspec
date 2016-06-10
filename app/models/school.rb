@@ -1,6 +1,8 @@
 class School < ActiveRecord::Base
 	validates_presence_of :name, :year, :mascot
 
+	has_many :classrooms
+
 	def school_name
 		"The school name is #{name}, with a #{mascot} as the mascot"
 	end
