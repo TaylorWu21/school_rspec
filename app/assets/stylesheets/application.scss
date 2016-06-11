@@ -1,3 +1,8 @@
+@import "materialize/components/color";
+$primary-color: color("deep-purple", "darken-1") !default;
+$secondary-color: color("blue-grey", "lighten-2") !default;
+@import 'materialize';
+@import url(https://fonts.googleapis.com/css?family=Biryani);
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,3 +18,7 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+  font-family: 'Biryani', sans-serif;
+}

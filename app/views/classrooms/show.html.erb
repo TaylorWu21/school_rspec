@@ -1,2 +1,7 @@
-<h1>Classrooms#show</h1>
-<p>Find me in app/views/classrooms/show.html.erb</p>
+<h1>Class: <%= @classroom.name %></h1>
+
+<h3>Classroom Size: <%= @classroom.size %></h3>
+
+<%= link_to 'Edit', edit_school_classroom_path(@school, @classroom), class:'btn' %>
+<%= link_to 'Delete', school_classroom_path(@school, @classroom), method: :delete, class:'btn' %>
+<%= link_to 'Back To Class', school_classrooms_path(@school), class:'btn' %>

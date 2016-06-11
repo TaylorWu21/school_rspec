@@ -1,0 +1,14 @@
+<%= form_for @school do |f| %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :mascot %>
+	<%= f.text_field :mascot %>
+
+	<%= f.label :year %>
+	<%= f.number_field :year %>
+
+	<%= f.submit nil, class:'btn' %>
+
+<% end %>

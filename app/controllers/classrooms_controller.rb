@@ -4,6 +4,7 @@ class ClassroomsController < ApplicationController
 
   def index
   	@classrooms = @school.classrooms.all
+
   end
 
   def show
