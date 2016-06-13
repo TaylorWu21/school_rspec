@@ -89,6 +89,10 @@ RSpec.describe ClassroomsController, type: :controller do
       expect(classroom.reload.name).to eq(@classroom_params[:classroom][:name])
     end
 
+    it 'flashes success message after update' do
+      expect(flash[:success]).to eq("Classroom has been updated!")
+    end
+
     it 'redirect to show page on success' do
       expect(response).to redirect_to(school_classroom_path(assigns(:school), assigns(:classroom)))
     end
@@ -132,6 +136,10 @@ RSpec.describe ClassroomsController, type: :controller do
       expect(Classroom.last.name).to eq(@classroom_params[:classroom][:name])
     end
 
+    it 'flashes success message after create' do
+      expect(flash[:success]).to eq("Classroom has been created!")
+    end
+
     it 'redirects to show page on success' do
       expect(response).to redirect_to(school_classroom_path(assigns(:school), assigns(:classroom)))
     end
@@ -158,6 +166,10 @@ RSpec.describe ClassroomsController, type: :controller do
 
     it 'deletes the school' do
       expect(Classroom.count).to eq(0)
+    end
+
+    it 'flashes success message after classroom deletes' do
+      expect(flash[:success]).to eq("Classroom has been dropped")
     end
 
     it 'redirects to classroom index' do

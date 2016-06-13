@@ -1,14 +1,18 @@
-<%= form_for @school do |f| %>
+<div class='center container'>
+	<%= form_for @school do |f| %>
 
-	<%= f.label :name %>
-	<%= f.text_field :name %>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
 
-	<%= f.label :mascot %>
-	<%= f.text_field :mascot %>
+		<%= f.label :mascot %>
+		<%= f.text_field :mascot %>
 
-	<%= f.label :year %>
-	<%= f.number_field :year %>
+		<%= f.label :year %>
+		<%= f.number_field :year %>
 
-	<%= f.submit nil, class:'btn' %>
+		<%= f.submit nil, class:'btn submit-school-btn green' %>
 
-<% end %>
+		<%= link_to 'Cancel', :back, class:'btn cancel-school-btn black' %>
+
+	<% end %>
+</div>

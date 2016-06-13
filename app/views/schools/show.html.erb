@@ -1,8 +1,17 @@
-<h1>Displaying: <%= @school.name %> Home of the <%= @school.mascot %>!</h1>
+<div class='center'>
 
-<h3><%= @school.name %> was built in <%= @school.year %></h3>
+	<h1 class='show-school-header'>Displaying: <%= @school.name %> Home of the <%= @school.mascot %>!</h1>
+
+	<h3 class='school-info-header'><%= @school.name %> was founded in <%= @school.year %></h3>
 
 
-<%= link_to 'Back To Schools', schools_path, class:'btn' %>
+	<%= link_to 'Back To Schools', schools_path, class:'btn back-to-schools-btn black' %>
 
-<%= link_to 'Classrooms', school_classrooms_path(@school), class:'btn' %> 
+	<%= link_to 'Classrooms', school_classrooms_path(@school), class:'btn classrooms-btn blue' %> 
+	<br />
+
+	<%= link_to 'Edit', edit_school_path(@school), class:'btn edit-school-btn orange' %>
+
+	<%= link_to 'Delete', school_path(@school), method: :delete, class:'btn delete-school-btn red' %>
+
+</div>

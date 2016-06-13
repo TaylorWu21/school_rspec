@@ -1,22 +1,24 @@
-<h1>Schoolio</h1>
+<h1 id='school-header'>Schoolio</h1>
 
 <% if @schools.any? %>
-  <div class='row'>
+  <div class='row container center'>
     <% @schools.each do |school| %>
-      <div class="col s12 m6">
-       <div class="card white">
+      <div class="col s12 m6 l4">
+       <div class="card red darken-3">
          <div class="card-content">
            <span class="card-title"><%= school.name %></span>
          </div>
          <div class="card-action">
-           <%= link_to 'Check Out School', school_path(school), class: 'btn' %>
+           <%= link_to 'Check Out School', school_path(school), class: 'btn view-school-btn' %>
          </div>
        </div>
       </div>
     <% end %>
   </div>
 <% else %>
-  <h3>No schools, please add one.</h3>
+  <h3 id='no-school-header'>No schools, please add one.</h3>
 <% end %>
 
-<%= link_to 'New School', new_school_path, class:'btn' %> 
+<div class='center'>
+  <%= link_to 'New School', new_school_path, class:'btn new-school-btn green' %> 
+</div>

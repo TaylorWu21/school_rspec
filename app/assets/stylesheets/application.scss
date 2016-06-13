@@ -2,7 +2,7 @@
 $primary-color: color("deep-purple", "darken-1") !default;
 $secondary-color: color("blue-grey", "lighten-2") !default;
 @import 'materialize';
-@import url(https://fonts.googleapis.com/css?family=Biryani);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -19,6 +19,47 @@ $secondary-color: color("blue-grey", "lighten-2") !default;
  *= require_self
  */
 
+ body { 
+  background-image: asset-url('school.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 html {
-  font-family: 'Biryani', sans-serif;
+  font-family: 'Oswald', sans-serif;
+}
+
+.flash {
+	text-align: center;
+	width: 50%;
+	font-size: 20px;
+	font-style: italic;
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+
+.flash.success {
+	background-color: #4080bf;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.flash.notice {
+	background-color: #4080bf;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+h1, h2, h3, h4 {
+	text-align: center;
+}
+
+.btn {
+	margin: 10px;
 }

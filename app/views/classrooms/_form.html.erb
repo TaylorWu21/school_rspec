@@ -1,11 +1,17 @@
-<%= form_for [@school, @classroom] do |f| %>
+<div class='center container'>
 
-	<%= f.label :name %>
-	<%= f.text_field :name %>
+	<%= form_for [@school, @classroom] do |f| %>
 
-	<%= f.label :size %>
-	<%= f.text_field :size %>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
 
-	<%= f.submit nil, class: 'btn' %>
+		<%= f.label :size %>
+		<%= f.text_field :size %>
 
-<% end %>
+		<%= f.submit nil, class: 'btn submit-classroom-btn green' %>
+
+		<%= link_to 'Cancel', :back, class:'btn cancel-classroom-btn black' %>
+
+	<% end %>
+
+</div>

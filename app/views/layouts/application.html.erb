@@ -8,6 +8,16 @@
 </head>
 <body>
 
+<h3>
+	<% if flash.any? %>
+		<% flash.each do |key, value| %>
+			<div class="flash <%= key %>">
+				<%= value %>
+			</div>
+		<% end %>
+	<% end %>
+</h3>
+
 <%= yield %>
 
 </body>

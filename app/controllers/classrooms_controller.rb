@@ -15,6 +15,7 @@ class ClassroomsController < ApplicationController
 
   def update
   	if @classroom.update(classroom_params)
+      flash[:success] = "Classroom has been updated!"
   		redirect_to school_classroom_path(@school, @classroom)
   	else
   		render :edit
@@ -28,6 +29,7 @@ class ClassroomsController < ApplicationController
   def create
   	@classroom = @school.classrooms.new(classroom_params)
   	if @classroom.save
+      flash[:success] = "Classroom has been created!"
   		redirect_to school_classroom_path(@school, @classroom)
   	else
   		render :new
@@ -36,6 +38,7 @@ class ClassroomsController < ApplicationController
 
   def destroy
   	@classroom.destroy
+    flash[:success] = "Classroom has been dropped"
   	redirect_to school_classrooms_path(@school)
   end
 

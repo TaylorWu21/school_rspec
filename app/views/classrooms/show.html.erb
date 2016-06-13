@@ -1,7 +1,13 @@
-<h1>Class: <%= @classroom.name %></h1>
+<div class='center'>
 
-<h3>Classroom Size: <%= @classroom.size %></h3>
+	<h1 class='show-classroom-header'>Class: <%= @classroom.name %></h1>
 
-<%= link_to 'Edit', edit_school_classroom_path(@school, @classroom), class:'btn' %>
-<%= link_to 'Delete', school_classroom_path(@school, @classroom), method: :delete, class:'btn' %>
-<%= link_to 'Back To Class', school_classrooms_path(@school), class:'btn' %>
+	<h3>Classroom Size: <%= @classroom.size %></h3>
+
+	<%= link_to 'Edit', edit_school_classroom_path(@school, @classroom), class:'btn edit-classroom-btn orange' %>
+
+	<%= link_to 'Delete', school_classroom_path(@school, @classroom), method: :delete, class:'btn delete-classroom-btn red' %>
+
+	<%= link_to 'Back To Class', school_classrooms_path(@school), class:'btn back-to-classrooms-btn black' %>
+
+</div>
