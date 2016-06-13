@@ -19,6 +19,11 @@ feature 'School index', js: true do
 			expect(find('.no-classrooms-header')).to_not eq(nil)
 		end
 
+		scenario 'back to school show' do
+			find('.back-to-school-btn').click
+			expect(find('.show-school-header')).to_not eq(nil)
+		end
+
 		scenario 'click new classroom' do
 			find('.new-classroom-btn').click
 			expect(find('#new-classroom-header').text).to eq("Creating a Class")
