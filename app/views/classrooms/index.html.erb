@@ -19,6 +19,10 @@
   <h3 class='no-classrooms-header'>No classes, please add one.</h3>
 <% end %>
 
+<div class='paginate'>
+  <%= will_paginate @classrooms %>
+</div>
+
 <div class='center'>
 	<%= link_to 'Add New Classes', new_school_classroom_path(@school), class:'btn new-classroom-btn green' %>
 </div>

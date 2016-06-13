@@ -2,7 +2,8 @@ class SchoolsController < ApplicationController
 	before_action :school, except: [:index, :new, :create]
 
   def index
-  	@schools = School.all
+  	@schools = School.all.paginate(:page => params[:page], :per_page => 6)
+
   end
 
   def show

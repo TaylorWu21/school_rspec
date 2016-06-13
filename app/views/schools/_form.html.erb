@@ -1,13 +1,13 @@
 <div class='center container'>
 	<%= form_for @school do |f| %>
 
-		<%= f.label :name %>
+		<%= f.label :name, class:'form-text' %>
 		<%= f.text_field :name %>
 
-		<%= f.label :mascot %>
+		<%= f.label :mascot, class:'form-text' %>
 		<%= f.text_field :mascot %>
 
-		<%= f.label :year %>
+		<%= f.label :year, class:'form-text' %>
 		<%= f.number_field :year %>
 
 		<%= f.submit nil, class:'btn submit-school-btn green' %>

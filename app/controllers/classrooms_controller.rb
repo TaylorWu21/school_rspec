@@ -3,7 +3,7 @@ class ClassroomsController < ApplicationController
 	before_action :classroom, except: [:index, :new, :create]
 
   def index
-  	@classrooms = @school.classrooms.all
+  	@classrooms = @school.classrooms.all.paginate(:page => params[:page], :per_page => 6)
 
   end
 
